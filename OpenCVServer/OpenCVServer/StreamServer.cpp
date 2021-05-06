@@ -16,6 +16,9 @@ StreamServer::~StreamServer()
 		closesocket(clientSocket);
 	}
 	WSACleanup();
+
+	cap.release();
+	destroyAllWindows();
 }
 
 ServerStatus init()
@@ -131,8 +134,8 @@ void sendVideoStream()
 			break;
 		}
 
-		cv::imshow("Server", frame);
-		if (waitKey(1) >= 0){
+		imshow("Server", frame);
+		if (waitKey(1) >= 0) {
 			status = SERVER_STOP;
 			closesocket(listenSocket);
 			break;

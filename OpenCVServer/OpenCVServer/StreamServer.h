@@ -14,8 +14,6 @@
 
 // Common
 #include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
 #include <vector>
 #include <thread>
 
@@ -26,8 +24,8 @@
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "27015"
 
-#define VIDEO_WIDTH 640.0
-#define VIDEO_HEIGHT 480.0
+#define VIDEO_WIDTH 640
+#define VIDEO_HEIGHT 480
 #define VIDEO_CHANNELS 3
 #define VIDEO_BUFLEN (VIDEO_WIDTH*VIDEO_HEIGHT*VIDEO_CHANNELS)
 
